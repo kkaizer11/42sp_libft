@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 03:52:47 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/28 03:34:57 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/05/28 17:25:21 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int	ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
