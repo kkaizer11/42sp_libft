@@ -6,90 +6,45 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 17:20:57 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/28 00:50:06 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/05/28 05:09:31 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 #include  <stdio.h>
 #include <string.h>
 
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-
-void	ft_strncmp_test(char *s1, char *s2, unsigned int n)
+int	main(void)
 {
-	int res;
-	int ft_res;
+	char *str;
+	char *to_find;
+	char *buff;
+	char *ft_buff;
 
-	res = strncmp(s1, s2, n);
-	ft_res = ft_strncmp(s1, s2, n);
-	if (res != ft_res)
-		printf("> KO, expected: %d, got: %d\n", res, ft_res);
+	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	to_find = strcpy(calloc(7, sizeof(char)), "galera");
+	buff = strstr(str, to_find);
+	ft_buff = ft_strstr(str, to_find);
+	if (buff != ft_buff)
+		printf("[1] KO, substrings don't match(expected:%s, got:%s)\n", buff, ft_buff); 
 	else
-		printf("> OK, result: %d\n", ft_res);
-}
-
-int		main(void)
-{
-	char	*s1 = "abcdefghi";
-	char	*s2 = "abcdEfghi";
-	char	s3[] = {'a', 'b', -23, 'd', 'e', 'f', 'g', 'h', 'i', '\0'};
-	char	*s4 = "abcdefghi";
-	char	*s5 = "abcd";
-	char	*s6 = "abcdefghijklmn";
-	char	*s7 = "";
-
-	int		offset;
-
-	offset = 0;
-	printf("[1] Testing strings \"%s\" and \"%s\"\n", s1, s2);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s1, s2, offset);
-		offset++;
-	}
-	offset = 0;
-	printf("[2] Testing strings \"%s\" and \"%s\"\n", s1, s3);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s1, s3, offset);
-		offset++;
-	}
-	offset = 0;
-	printf("[3] Testing strings \"%s\" and \"%s\"\n", s2, s3);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s2, s3, offset);
-		offset++;
-	}
-	offset = 0;		// Comparing equal strings. Should return 0.
-	printf("[4] Testing strings \"%s\" and \"%s\" (same strings)\n", s1, s4);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s1, s4, offset);
-		offset++;
-	}
-	offset = 0;		// Comparing with a shorter string (s5 lenght 5).
-	printf("[5] Testing strings \"%s\" and \"%s\"\n", s1, s5);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s1, s5, offset);
-		offset++;
-	}
-	offset = 0;		// Comparing with a longer string (s6 lenght 15).
-	printf("[6] Testing strings \"%s\" and \"%s\"\n", s1, s6);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s1, s6, offset);
-		offset++;
-	}
-	offset = 0;		// Comparing with an empty string (s7).
-	printf("[7] Testing strings \"%s\" and \"%s\"\n", s1, s7);
-	while (offset < 10)
-	{
-		ft_strncmp_test(s1, s7, offset);
-		offset++;
-	}
+		printf("[1] OK. expected: %s result: %s\n", buff, ft_buff);
+	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	to_find = strcpy(calloc(7, sizeof(char)), "galerA");
+	buff = strstr(str, to_find);
+	ft_buff = ft_strstr(str, to_find);
+	if (buff != ft_buff)
+		printf("[2] KO, substrings don't match(expected:%s, got:%s)\n", buff, ft_buff); 
+	else
+		printf("[2] OK. expected: %s result: %s\n", buff, ft_buff);
+	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	to_find = strcpy(calloc(1, sizeof(char)), "");
+	buff = strstr(str, to_find);
+	ft_buff = ft_strstr(str, to_find);
+	if (buff != ft_buff)
+		printf("[2] KO, substrings don't match(expected:%s, got:%s)\n", buff, ft_buff); 
+	else
+		printf("[2] OK. expected: %s result: %s\n", buff, ft_buff);
 	return (0);
 }
