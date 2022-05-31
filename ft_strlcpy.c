@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 22:01:07 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/28 17:03:13 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/05/30 23:05:21 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+	

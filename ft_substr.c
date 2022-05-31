@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 17:20:57 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/31 03:30:51 by mkaizer-         ###   ########.fr       */
+/*   Created: 2022/05/30 02:28:55 by mkaizer-          #+#    #+#             */
+/*   Updated: 2022/05/30 17:58:49 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+char	*ft_substr(char const *s, unsigned int start,size_t len)
 {
-	char *x = "chá";
-	char *y = "verde";
-	printf("depois: %ld", ft_strlcat(x, y, 5));
+	char			*str;
+	unsigned int	i;
+	unsigned int	s_len;
+
+	s_len = ft_strlen(s);
+	str = (char *)malloc(sizeof(char) * (len + 1);
+	if (!str)
+		return (NULL);
 }

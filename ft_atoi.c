@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 17:20:57 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/31 03:30:51 by mkaizer-         ###   ########.fr       */
+/*   Created: 2022/05/29 20:53:39 by mkaizer-          #+#    #+#             */
+/*   Updated: 2022/05/29 23:44:17 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+int	ft_atoi(const char *nptr)
 {
-	char *x = "chá";
-	char *y = "verde";
-	printf("depois: %ld", ft_strlcat(x, y, 5));
+	int	signal;
+	int	i;
+	int	res;
+
+	signal = 1;
+	i = 0;
+	res = 0;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	while (nptr[i] == '+' || nptr[i] == '-')
+	{
+		if (nptr[i] == '-')
+			signal = signal * -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = res * 10 + (nptr[i] - '0');
+		i ++;
+	}
+	return (res * signal);
 }
