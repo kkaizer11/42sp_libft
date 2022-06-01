@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:55:22 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/28 01:41:03 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/01 04:12:41 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
+	char	*src;
 
+	src = (char *)s;
 	len = ft_strlen(s);
-	while (len != 0)
+	while ((len + 1) != 0)
 	{
-		if (s[len] == c)
-			return ((char *)(s + len));
+		if (src[len] == (char)c)
+			return (&src[len]);
 		len --;
 	}
 	return (NULL);
