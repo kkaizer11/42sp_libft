@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 17:20:57 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/01 21:19:13 by mkaizer-         ###   ########.fr       */
+/*   Created: 2022/06/01 16:37:03 by mkaizer-          #+#    #+#             */
+/*   Updated: 2022/06/01 21:26:23 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int	main(void)
+void	ft_bzero(void *s, size_t n)
 {
-	char x[5];
-	printf("antes: %s\n", x);
-	memset(x, 'm', sizeof(char) * 5);
-	printf("depois: %s\n", x);
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = (char *) s;
+	while (i < n)
+	{
+		str[i] = 0;
+		i ++;
+	}
 }
