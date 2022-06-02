@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 22:58:50 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/02 16:43:51 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/02 19:05:11 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*s_dest;
 	unsigned char	*s_src;
 
-	if (!dest || !src)
-		return (NULL);
+	
 	s_dest = (unsigned char *) dest;
 	s_src = (unsigned char *) src;
 	i = 0;
+	if (!dest || !src)
+		return (s_dest);
 	while (i < n)
 	{
 		s_dest[i] = s_src[i];
