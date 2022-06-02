@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 17:20:57 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/01 21:19:13 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/02 05:38:47 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int	main(void)
-{
-	char x[5];
-	printf("antes: %s\n", x);
-	memset(x, 'm', sizeof(char) * 5);
-	printf("depois: %s\n", x);
-}
+//ft_memset
+// int	main(void)
+// {
+// 	char x[10];
+// 	char y[10];
+// 	memset(x, 'm', sizeof(char) * 10);
+// 	ft_memset(y, 'm', sizeof(char) * 10);
+// 	printf("1: %s\n", x);
+// 	printf("2: %s\n", y);
+// }
