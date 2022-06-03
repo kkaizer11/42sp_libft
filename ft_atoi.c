@@ -6,11 +6,9 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:53:39 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/29 23:44:17 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:34:05 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

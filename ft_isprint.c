@@ -6,11 +6,9 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:15:58 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/05/27 00:34:44 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:35:02 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

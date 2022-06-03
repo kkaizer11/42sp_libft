@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 17:20:57 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/02 23:19:15 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:32:31 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,25 @@
 // }
 
 //ft_memcmp
+// int main()
+// {
+// 	char s[] = {-128, 0, 127, 0};
+// 	char s2[] = {0, 0, 127, 0};
+// 	//char sCpy[] = {-128, 0, 127, 0};
+// 	printf("Valor: %d\n", ft_memcmp(s, s2, 4));
+// }
+
+// strlcat
 int main()
 {
-	char s[] = {-128, 0, 127, 0};
-	char s2[] = {0, 0, 127, 0};
-	//char sCpy[] = {-128, 0, 127, 0};
-	printf("Valor: %d\n", ft_memcmp(s, s2, 4));
+	 char src[50], dest[50];
+
+   ft_strlcpy(src,  "segunda" , 50);
+   ft_strlcpy(dest, "PRIMEIRA", 50);
+
+   strcat(dest, src);
+
+   printf("|%s|\n", dest);
+   
+   return(0);
 }
