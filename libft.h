@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 03:52:47 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/06 21:55:41 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/08 17:35:39 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(char const *s, unsigned int start,size_t len);
 

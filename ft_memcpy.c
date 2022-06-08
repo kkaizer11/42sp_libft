@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 22:58:50 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/03 19:36:52 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/08 04:55:07 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		s_dest[i] = s_src[i];
 		i++;
 	}
-	return (s_src);
+	return (s_dest);
 }
