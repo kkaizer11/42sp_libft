@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:31:12 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/16 00:27:16 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/18 15:40:45 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,29 @@ size_t	get_wordsnum(const char *s, char c)
 
 size_t	get_wordlen(const char *s, char c)
 {
-	size_t	offset;
+	size_t	i;
 
-	offset = 0;
-	while (s[offset] && s[offset] != c)
-		offset++;
-	return (offset);
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
 }
 
 char	*worddup(const char *s, size_t len)
 {
 	char	*str;
-	size_t	offset;
+	size_t	i;
 
 	str = malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
-	offset = 0;
-	while (offset < len)
+	i = 0;
+	while (i < len)
 	{
-		str[offset] = s[offset];
-		offset++;
+		str[i] = s[i];
+		i++;
 	}
-	str[offset] = '\0';
+	str[i] = '\0';
 	return (str);
 }
 
@@ -99,4 +99,15 @@ char	**ft_split(const char *s, char c)
 	}
 	res[counter] = NULL;
 	return (res);
+}
+
+#include <stdio.h>
+int main()
+{
+	char *a = "Rio de Janeiro";
+	char **x;
+	
+	x = ft_split(a, 'J');
+	printf("%s\n", x[0]);
+	printf("%s\n", x[1]);
 }
