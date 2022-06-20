@@ -6,13 +6,13 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 19:31:12 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/18 15:40:45 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/20 04:33:51 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_wordsnum(const char *s, char c)
+static size_t	get_wordsnum(const char *s, char c)
 {
 	int		is_word;
 	size_t	words;
@@ -33,7 +33,7 @@ size_t	get_wordsnum(const char *s, char c)
 	return (words);
 }
 
-size_t	get_wordlen(const char *s, char c)
+static size_t	get_wordlen(const char *s, char c)
 {
 	size_t	i;
 
@@ -43,7 +43,7 @@ size_t	get_wordlen(const char *s, char c)
 	return (i);
 }
 
-char	*worddup(const char *s, size_t len)
+static char	*worddup(const char *s, size_t len)
 {
 	char	*str;
 	size_t	i;
@@ -99,15 +99,4 @@ char	**ft_split(const char *s, char c)
 	}
 	res[counter] = NULL;
 	return (res);
-}
-
-#include <stdio.h>
-int main()
-{
-	char *a = "Rio de Janeiro";
-	char **x;
-	
-	x = ft_split(a, 'J');
-	printf("%s\n", x[0]);
-	printf("%s\n", x[1]);
 }
