@@ -6,7 +6,7 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 22:22:09 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/11 17:49:45 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/20 04:25:43 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_itoa(int n)
 	const char		neg = (n < 0);
 	const size_t	width = get_width(n);
 
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	num = ft_calloc(width + 1, sizeof(char));
 	if (!num)

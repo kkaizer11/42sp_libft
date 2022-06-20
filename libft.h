@@ -6,17 +6,17 @@
 /*   By: mkaizer- <mkaizer-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 03:52:47 by mkaizer-          #+#    #+#             */
-/*   Updated: 2022/06/16 00:43:25 by mkaizer-         ###   ########.fr       */
+/*   Updated: 2022/06/20 04:25:15 by mkaizer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef  LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <limits.h>
+
+
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
